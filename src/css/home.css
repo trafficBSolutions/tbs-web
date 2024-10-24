@@ -72,7 +72,14 @@ body {
   column-gap: 6.4rem;
   row-gap: 9.6rem;
 }
-
+.web-dev-creator-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-top: 3.2rem;
+  text-align: center;
+}
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
@@ -353,7 +360,39 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.photo-note {
+  font-size: 50px;
+    text-align: center;
+    font-family: "Kairos W04 Extended Bold";
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto 0;
+  align-items: center;
+  max-width: 1000px;
+}
+.navigation-buttons {
+  display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+.gallery-item {
+  flex: 1;
+  max-width: 45%;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.section-featured {
+  padding: 3.2rem 0 3.2rem 0;
+  background-color: #fdf2e9;
+}
 .step-img2-box {
   position: relative;
   display: flex;
@@ -424,7 +463,9 @@ body {
   font-size: 50px;
   
 }
-
+.photo-note {
+  font-size: 30px;
+}
 .applybutton {
   font-size: 20px;
   text-align: center;
@@ -461,7 +502,9 @@ body {
   font-size: 50px;
   
 }
-
+.photo-note {
+  font-size: 30px;
+}
 .applybutton {
   font-size: 20px;
   text-align: center;
@@ -508,6 +551,9 @@ body {
 }
 .veteran-owned-img {
   width: 100%;
+}
+.web-dev-creator-title {
+  font-size: 35px;
 }
 }
 
