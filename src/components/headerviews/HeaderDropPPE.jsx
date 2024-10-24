@@ -20,10 +20,10 @@ function Header() {
     <nav className={`main-nav ${isNavOpen ? 'active' : ''}`}>
         <ul className="main-nav-list">
             <li><a className="main-nav-link" href="/trafficcontrol">Traffic Control</a></li>
-            <li><a className="main-nav-link-view" href="">Traffic Control Plans</a></li>
+            <li><a className="main-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
             <li><a className="main-nav-link" href="/bollardswheels">Bollards & Wheel Stops</a></li>
             <li><a className="main-nav-link" href="/signs">Traffic Sign Manufacturing</a></li>
-            <li><a className="main-nav-link" href="/ppe">PPE Sales</a></li>
+            <li><a className="main-nav-link-view" href="">PPE Sales</a></li>
             <li><a className="main-nav-link" href="/rentals">Equipment Rental & Sales</a></li>
         </ul>
     </nav>
