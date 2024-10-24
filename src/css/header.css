@@ -107,11 +107,11 @@
     transition: all 0.3s;
     display: flex;
     align-items: center;
-    background-color: #0f375a;
+    background-color: grey;
     border-radius: 9px;
 }
 .header-worx-logo:hover {
-    background-color: #226daf;
+    background-color: #949494;
 }
 
 .material-worx-text {
