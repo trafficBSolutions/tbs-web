@@ -1,170 +1,170 @@
 import React, { useState } from 'react';
-import Gallery from 'react-photo-gallery';
+import images from '../utils/tbsImages';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 const photos = [
   {
-    src: '../public/buffer and tapers/trafficset.jpg',
+    src: images['../assets/buffer and tapers/trafficset.jpg']?.default || '',
     width: 4032,
     height: 3024
   },
   {
-    src: '../public/buffer and tapers/trafficset2.jpg',
+    src: images['../assets/buffer and tapers/trafficset2.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   {
-    src: '../public/buffer and tapers/trafficset3.jpg',
+    src: images['../assets/buffer and tapers/trafficset3.jpg']?.default || '',
     width: 480,
     height: 640
   },
   {
-    src: '../public/buffer and tapers/trafficset4.jpg',
+    src: images['../assets/buffer and tapers/trafficset4.jpg']?.default || '',
     width: 2000,
     height: 1500
   },
   {
-    src: '../public/buffer and tapers/trafficset5.jpg',
+    src: images['../assets/buffer and tapers/trafficset5.jpg']?.default || '',
     width: 4032,
     height: 3024
   },
   
   {
-    src: '../public/buffer and tapers/setup.jpg',
+    src: images['../assets/buffer and tapers/setup.jpg']?.default || '',
     width: 768,
     height: 1024
   },
   /*
   {
-    src: '../public/buffer and tapers/setup1.jpg',
+    src: '../assets/buffer and tapers/setup1.jpg']?.default || '',
     width: 800,
     height: 600
   },
   */
   {
-    src: '../public/buffer and tapers/setup2.jpg',
+    src: images['../assets/buffer and tapers/setup2.jpg']?.default || '',
     width: 800,
     height: 600
   },
   {
-    src: '../public/buffer and tapers/trafficcontrolset.PNG',
+    src: images['../assets/buffer and tapers/trafficcontrolset.png']?.default || '',
     width: 960,
     height: 720
   },
   {
-    src: '../public/buffer and tapers/setup4.jpg',
+    src: images['../assets/buffer and tapers/setup4.jpg']?.default || '',
     width: 800,
     height: 600
   },
   {
-    src: '../public/buffer and tapers/barrels.jpg',
+    src: images['../assets/buffer and tapers/barrels.jpg']?.default || '',
     width: 4,
     height: 3
   },
   {
-    src: '../public/bollards/install.jpg',
+    src: images['../assets/bollards/install.jpg']?.default || '',
     width: 4032,
     height: 3024
   },
   {
-    src: '../public/bollards/bollards.jpeg',
+    src: images['../assets/bollards/bollards.jpg']?.default || '',
       width: 698,
       height: 926
   },
   
   {
-    src: '../public/bollards/concrete bollards.png',
+    src: images['../assets/bollards/concrete bollards.png']?.default || '',
     width: 1439,
     height: 1849
   },
   {
-    src: '../public/bollards/metal bollards.png',
+    src: images['../assets/bollards/metal bollards.png']?.default || '',
     width: 759,
       height: 900
   },
   /*
   {
-    src: '../public/message and arrow boards/arrow board2.png',
+    src: '../assets/message and arrow boards/arrow board2.png',
     width: 650,
     height: 420
   },
   {
-    src: '../public/message and arrow boards/message board.png',
+    src: '../assets/message and arrow boards/message board.png',
     width: 1000,
     height: 1000
   },
   */
   {
-    src: '../public/ppes/PPE Sales.jpg',
+    src: images['../assets/ppes/PPE Sales.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   {
-    src: '../public/ppes/vests.jpg',
+    src: images['../assets/ppes/vests.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   {
-    src: '../public/road signs/citylimit.jpg',
+    src: images['../assets/road signs/citylimit.jpg']?.default || '',
     width: 4032,
     height: 3024
   },
   {
-    src: '../public/road signs/harris art.jpg',
+    src: images['../assets/road signs/harris art.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   /*
   {
-    src: '../public/road signs/merge right.jpg',
+    src: '../assets/road signs/merge right.jpg']?.default || '',
     height: 4032,
     width: 3024
   },
   
   {
-    src: '../public/road signs/no left turn.jpg',
+    src: '../assets/road signs/no left turn.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   
   {
-    src: '../public/road signs/road work.jpg',
+    src: '../assets/road signs/road work.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   {
-    src: '../public/road signs/stop.jpg',
+    src: '../assets/road signs/stop.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   {
-    src: '../public/road signs/street sign.jpg',
+    src: '../assets/road signs/street sign.jpg]?.default || ''
     width: 4032,
     height: 3024
   },
   {
-    src: '../public/road signs/warning sign.jpg',
+    src: '../assets/road signs/warning sign.jpg']?.default || ''
     width: 3024,
     height: 4032
   },
   {
-    src: '../public/road signs/yield.jpg',
+    src: '../assets/road signs/yield.jpg']?.default || ''
     width: 4032,
     height: 3024
   },
   */
   {
-    src: '../public/road signs/no littering.jpg',
+    src: images['../assets/road signs/no littering.jpg']?.default || '',
     width: 4032,
     height: 3024
   },
   {
-    src: '../public/road signs/one way.jpg',
+    src: images['../assets/road signs/one way.jpg']?.default || '',
     width: 3024,
     height: 4032
   },
   /*
   {
-    src: '../public/road signs/sidewalk closed.jpg',
+    src: '../assets/road signs/sidewalk closed.jpg']?.default || '',
     width: 4032,
     height: 3024
   },
@@ -187,16 +187,22 @@ export default function HomePhotoGallery() {
   const visiblePhotos = photos.slice(currentPhotoIndex, currentPhotoIndex + 2);
 
   return (
-    <div>
+    <div className="gallery-container">
       <h2 className="photo-note">PHOTO GALLERY</h2>
-      <div style={{ position: 'relative' }}>
-        <Gallery photos={visiblePhotos} />
-        {currentPhotoIndex !== 0 && (
+      <div className="gallery">
+        {visiblePhotos.map((photo, index) => (
+          <div className="gallery-item" key={index}>
+            <img src={photo.src} alt={`Photo ${index}`} />
+          </div>
+        ))}
+      </div>
+      <div className="navigation-buttons">
+        {currentPhotoIndex > 0 && (
           <button className="gallery-navigation-arrow-left" onClick={handlePrevious}>
             <FaArrowLeft />
           </button>
         )}
-        {currentPhotoIndex + 3 < photos.length && (
+        {currentPhotoIndex + 2 < photos.length && (
           <button className="gallery-navigation-arrow-right" onClick={handleNext}>
             <FaArrowRight />
           </button>
