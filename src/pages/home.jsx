@@ -4,6 +4,7 @@ import '../css/header.css';
 import '../css/footer.css';
 import HomePhotoGallery from '../components/homephotogal'; 
 import Header from '../components/headerviews/HeaderDrop'
+import images from '../utils/tbsImages';
 export default function Home() {
     return (
       <div>
@@ -11,7 +12,7 @@ export default function Home() {
           <main>
           <div className="page-banner">
           <video className="page-banner__bg-vid-dash" autoPlay loop muted playsInline>
-            <source src="../public/videos/trafficflow.mp4" type="video/mp4"></source>
+            <source src={images["../assets/videos/trafficflow.mp4"].default} type="video/mp4"></source>
           </video>
           <div className="tbs-name-container">
             <div className="tbs-name">TRAFFIC AND BARRIER SOLUTIONS, LLC</div>
@@ -43,7 +44,7 @@ export default function Home() {
         </section>
         <section className="veteran-owned">
           <div className="veteran-owned-div">
-            <img className="veteran-owned-img" alt="veteran-owned" src="../public/tbs_companies/veteran-owned.png">
+            <img className="veteran-owned-img" alt="veteran-owned" src={images["../assets/tbs_companies/Veteran Owned.svg"].default}>
             </img>
           </div>
         </section>
@@ -54,21 +55,22 @@ export default function Home() {
             <a href="/applynow" className="btn btn--full applybutton">APPLY NOW</a>
           </div>
         </section>
-        
-        <section className="section-how" id="how">
-          <div className="container">
-            <span className="subheading">What We Do</span>
-            <h2 className="heading-secondary">
-            You can choose from what we do.
-            </h2>
-          </div>
-          <section className="section-featured">
+        <section className="section-featured">
           <div className="container">
             <div className="gallery-container">
               <HomePhotoGallery /> {/* Render the photo gallery here */}
             </div>
           </div>
         </section>
+        <section className="section-how" id="how">
+        
+          <div className="container">
+            <span className="subheading">What We Do</span>
+            <h2 className="heading-secondary">
+            You can choose from what we do.
+            </h2>
+          </div>
+          
           <div className="container grid grid--2-cols grid--center-v">
   
             <div className="step-text-box">
@@ -84,7 +86,7 @@ export default function Home() {
   
             <div className="step-img-box">
               <img
-                src="../public/buffer and tapers/trafficset5.jpg"
+                src={images["../assets/buffer and tapers/trafficset5.jpg"].default}
                 className="step-img"
                 alt="iPhone app
               preferences selection screen"
@@ -105,7 +107,7 @@ export default function Home() {
             </div>
             <div className="step-img-box">
               <img
-                src="../public/buffer and tapers/tcp image.png"
+                src={images["../assets/buffer and tapers/tcp image.png"].default}
                 className="step-img"
                 alt="iPhone app
               meal approving plan screen"
@@ -121,7 +123,7 @@ export default function Home() {
             </div>
             <div className="step-img-box">
               <img
-                src="../public/bollards/bollards.jpeg"
+                src={images["../assets/bollards/bollards.jpg"].default}
                 className="step-img"
                 alt="iPhone app
               delivery screen"
@@ -147,7 +149,7 @@ export default function Home() {
   
             <div className="step-img-box">
               <img
-                src="../public/road signs/citylimit.jpg"
+                src={images["../assets/road signs/citylimit.jpg"].default}
                 className="step-img"
                 alt="iPhone app
               preferences selection screen"
@@ -169,7 +171,7 @@ export default function Home() {
             </div>
             <div className="step-img-box">
               <img
-                src="../public/ppes/vests.jpg"
+                src={images["../assets/ppes/vests.jpg"].default}
                 className="step-img"
                 alt="iPhone app
               meal approving plan screen"
@@ -187,7 +189,7 @@ export default function Home() {
             </div>
             <div className="step-img-box">
               <img
-                src="../public/message and arrow boards/arrow board2.png"
+                src={images["../assets/message and arrow boards/arrow board2.png"].default}
                 className="step-img"
                 alt="iPhone app
               delivery screen"
@@ -201,23 +203,28 @@ export default function Home() {
             <h2 className="will-web">We can help your website stand out:</h2>
             <a href="/web-development" className="btn btn--full web-button">WEB DEVELOPMENT</a>
           </div>
+          <div className="web-dev-creator">
+            <h1 className="web-dev-creator-title">
+              TBS Website Created By William Rowell
+            </h1>
+          </div>
         </section>
       </main>
       <footer className="footer">
       <div className="social-icons">
                 <a className="social-icon" href="https://www.facebook.com/tbssigns2022/" target="_blank" rel="noopener noreferrer">
-                    <img className="facebook-img" src="../public/social media/facebook.png" alt="Facebook" />
+                    <img className="facebook-img" src={images["../assets/social media/facebook.png"].default} alt="Facebook" />
                 </a>
                 <a className="social-icon" href="https://www.tiktok.com/@tbsmaterialworx?_t=8lf08Hc9T35&_r=1" target="_blank" rel="noopener noreferrer">
-                    <img className="tiktok-img" src="../public/social media/tiktok.png" alt="TikTok" />
+                    <img className="tiktok-img" src={images["../assets/social media/tiktok.png"].default} alt="TikTok" />
                 </a>
                 <a className="social-icon" href="https://www.instagram.com/tbsmaterialworx?igsh=YzV4b3doaTExcjN4&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img className="insta-img" src="../public/social media/instagram.png" alt="Instagram" />
+                    <img className="insta-img" src={images["../assets/social media/instagram.png"].default} alt="Instagram" />
                 </a>
             </div>
     <div className="site-footer__inner container container--narrow">
         <div className="footer-content">
-          <img className="tbslogo" alt="TBS logo" src="../public/tbs_companies/TBS Logo1.png" />
+          <img className="tbslogo" alt="TBS logo" src={images["../assets/tbs_companies/tbs.svg"].default} />
           <ul className="footer-navigate">
         <li><a className="footer-nav-link" href="/trafficcontrol">Traffic Control</a></li>
         <li><a className="footer-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
@@ -241,7 +248,7 @@ export default function Home() {
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src="../public/tbs_companies/TBS Logo1.png"></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
