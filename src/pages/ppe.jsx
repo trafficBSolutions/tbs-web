@@ -3,6 +3,7 @@ import '../css/ppe.css'
 import '../css/header.css'
 import '../css/footer.css'
 import axios from 'axios';
+import images from '../utils/tbsImages';
 import Header from '../components/headerviews/HeaderDropPPE'
 const states = [
   { abbreviation: 'AL', name: 'Alabama' },
@@ -443,27 +444,27 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
 
   <div className="ppe-flex-container">
     <div className="ppe-img-container">
-      <img src="../public/ppes/tshirt.png" alt="ppe" className="ppe-img" />
+      <img src={images["../assets/ppes/tshirt.png"].default} alt="ppe" className="ppe-img" />
       <h3 className="ppe-img-text">Construction T-Shirt</h3>
     </div>
     <div className="ppe-img-container">
-      <img src="../public/ppes/sweatshirt.png" alt="ppe" className="ppe-img" />
+      <img src={images["../assets/ppes/sweatshirt.png"].default} alt="ppe" className="ppe-img" />
       <h3 className="ppe-img-text">Construction Sweatshirt</h3>
     </div>
     <div className="ppe-img-container">
-      <img src="../public/ppes/jacket.png" alt="ppe" className="ppe-img" />
+      <img src={images["../assets/ppes/jacket.png"].default} alt="ppe" className="ppe-img" />
       <h3 className="ppe-img-text">Construction Heavy Jacket</h3>
     </div>
     <div className="ppe-img-container">
-      <img src="../public/ppes/rain jacket.png" alt="ppe" className="ppe-img" />
+      <img src={images["../assets/ppes/rain jacket.png"].default} alt="ppe" className="ppe-img" />
       <h3 className="ppe-img-text">Construction Rain Jacket</h3>
     </div>
     <div className="ppe-img-container">
-      <img src="../public/ppes/vest.png" alt="ppe" className="ppe-img" />
+      <img src={images["../assets/ppes/vest.png"].default} alt="ppe" className="ppe-img" />
       <h3 className="ppe-img-text">Construction Vest</h3>
     </div>
     <div className="ppe-img-container">
-      <img src="../public/ppes/hard hat.png" alt="ppe" className="ppe-img" />
+      <img src={images["../assets/ppes/hard hat.png"].default} alt="ppe" className="ppe-img" />
       <h3 className="ppe-img-text">Construction Hard Hat</h3>
     </div>
   </div>
@@ -553,18 +554,18 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
       <footer className="footer">
       <div className="social-icons">
                 <a className="social-icon" href="https://www.facebook.com/tbssigns2022/" target="_blank" rel="noopener noreferrer">
-                    <img className="facebook-img" src="../public/social media/facebook.png" alt="Facebook" />
+                    <img className="facebook-img" src={images["../assets/social media/facebook.png"].default} alt="Facebook" />
                 </a>
                 <a className="social-icon" href="https://www.tiktok.com/@tbsmaterialworx?_t=8lf08Hc9T35&_r=1" target="_blank" rel="noopener noreferrer">
-                    <img className="tiktok-img" src="../public/social media/tiktok.png" alt="TikTok" />
+                    <img className="tiktok-img" src={images["../assets/social media/tiktok.png"].default} alt="TikTok" />
                 </a>
                 <a className="social-icon" href="https://www.instagram.com/tbsmaterialworx?igsh=YzV4b3doaTExcjN4&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img className="insta-img" src="../public/social media/instagram.png" alt="Instagram" />
+                    <img className="insta-img" src={images["../assets/social media/instagram.png"].default} alt="Instagram" />
                 </a>
             </div>
     <div className="site-footer__inner container container--narrow">
         <div className="footer-content">
-          <img className="tbslogo" alt="TBS logo" src="../public/tbs_companies/TBS Logo1.png" />
+          <img className="tbslogo" alt="TBS logo" src={images["../assets/tbs_companies/tbs.svg"].default} />
           <ul className="footer-navigate">
         <li><a className="footer-nav-link" href="/trafficcontrol">Traffic Control</a></li>
         <li><a className="footer-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
@@ -587,7 +588,7 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src="../public/tbs_companies/TBS Logo1.png"></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
