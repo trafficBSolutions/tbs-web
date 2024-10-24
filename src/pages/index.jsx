@@ -7,8 +7,7 @@ import Signs from './signs'
 import Rentals from './rentals'
 import PPE from './ppe'
 import Email from './emailform'
-import WorX from './materialworx'
 import Error from './error'
 import Web from './web-development'
 
-export { Apply, Home, TrafficControl, TrafficPlan, BollardsWheels, Signs, Rentals, PPE, Email, WorX, Error, Web };
+export { Apply, Home, TrafficControl, TrafficPlan, BollardsWheels, Signs, Rentals, PPE, Email, Error, Web };
