@@ -478,7 +478,7 @@ In parking garages, wheel stops are essential for maximizing space utilization a
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/TBS Logo1.png"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
