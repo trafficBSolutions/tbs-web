@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../css/error.css';
+import images from '../utils/tbsImages';
 const Error = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const toggleMenu = () => {
@@ -9,7 +10,7 @@ const Error = () => {
 <div>
             <header className="header">
     <a className="header-logo" href="/">
-        <img alt="TBS logo" className="tbs-logo-img" src="../public/tbs_companies/TBS Logo1.png" />
+        <img alt="TBS logo" className="tbs-logo-img" src={images["../assets/tbs_companies/tbs.svg"].default} />
     </a>
     <div className="mobile-nav-icon">
     <button className="mobile-nav" onClick={toggleMenu}>
@@ -20,7 +21,7 @@ const Error = () => {
         <ul className="main-nav-list">
             <li><a className="main-nav-link" href="/trafficcontrol">Traffic Control</a></li>
             <li><a className="main-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
-            <li><a className="main-nav-link" href="/bollards">Bollards & Wheel Stops</a></li>
+            <li><a className="main-nav-link" href="/bollardswheels">Bollards & Wheel Stops</a></li>
             <li><a className="main-nav-link" href="/signs">Traffic Sign Manufacturing</a></li>
             <li><a className="main-nav-link" href="/ppe">PPE Sales</a></li>
             <li><a className="main-nav-link" href="/rentals">Equipment Rental & Sales</a></li>
@@ -28,14 +29,14 @@ const Error = () => {
     </nav>
     <div className="header-worx-links">
     <a className="header-worx-logo" href="/materialworx">
-        <img className="material-worx-img"alt="Material WorX logo" src="../public/tbs_companies/material worx.png"/>
+        <img className="material-worx-img"alt="Material WorX logo" src={images["../assets/tbs_companies/Material WorX.svg"].default} />
         <h1 className="material-worx-text">Custom Shop</h1>
     </a>
     </div>
 </header>
 <main className="error-main">
     <div className="error-img">
-        <img className="error-img-1" alt="error" src="../public/tbs_companies/TBS Cone.png"/>
+        <img className="error-img-1" alt="error" src={images["../assets/tbs cone.svg"].default}/>
     </div>
 <div className="not-found-container">
             <h1 className="NotFound">404 - Not Found</h1>
@@ -46,18 +47,18 @@ const Error = () => {
 <footer className="footer">
 <div className="social-icons">
                 <a className="social-icon" href="https://www.facebook.com/tbssigns2022/" target="_blank" rel="noopener noreferrer">
-                    <img className="facebook-img" src="../public/social media/facebook.png" alt="Facebook" />
+                    <img className="facebook-img" src={images["../assets/social media/facebook.png"].default} alt="Facebook" />
                 </a>
                 <a className="social-icon" href="https://www.tiktok.com/@tbsmaterialworx?_t=8lf08Hc9T35&_r=1" target="_blank" rel="noopener noreferrer">
-                    <img className="tiktok-img" src="../public/social media/tiktok.png" alt="TikTok" />
+                    <img className="tiktok-img" src={images["../assets/social media/tiktok.png"].default} alt="TikTok" />
                 </a>
                 <a className="social-icon" href="https://www.instagram.com/tbsmaterialworx?igsh=YzV4b3doaTExcjN4&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img className="insta-img" src="../public/social media/instagram.png" alt="Instagram" />
+                    <img className="insta-img" src={images["../assets/social media/instagram.png"].default} alt="Instagram" />
                 </a>
             </div>
     <div className="site-footer__inner container container--narrow">
         <div className="footer-content">
-          <img className="tbslogo" alt="TBS logo" src="../public/tbs_companies/TBS Logo1.png" />
+          <img className="tbslogo" alt="TBS logo" src={images["../assets/tbs_companies/tbs.svg"].default} />
           <ul className="footer-navigate">
         <li><a className="footer-nav-link" href="/trafficcontrol">Traffic Control</a></li>
         <li><a className="footer-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
@@ -80,7 +81,7 @@ const Error = () => {
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src="../public/tbs_companies/TBS Logo1.png"></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
