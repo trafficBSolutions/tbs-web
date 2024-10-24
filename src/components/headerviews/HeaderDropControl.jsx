@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import images from '../../utils/tbsImages';
 function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -10,7 +10,7 @@ function Header() {
     return (
         <header className="header">
     <a className="header-logo" href="/">
-        <img alt="TBS logo" className="tbs-logo-img" src="../public/tbs_companies/TBS logo1.png" />
+    <img alt="TBS logo" className="tbs-logo-img" src={images["../assets/tbs_companies/tbs.svg"].default} />
     </a>
     <div className="mobile-nav-icon">
     <button className="mobile-nav" onClick={toggleMenu}>
@@ -28,8 +28,8 @@ function Header() {
         </ul>
     </nav>
     <div className="header-worx-links">
-    <a className="header-worx-logo" href="/materialworx">
-        <img className="material-worx-img"alt="Material WorX logo" src="../public/tbs_companies/material worx.png"/>
+    <a className="header-worx-logo" target="_blank" rel="noopener noreferrer" href="https://www.material-worx.com">
+        <img className="material-worx-img"alt="Material WorX logo" src={images["../assets/tbs_companies/Material WorX.svg"].default} />
         <h1 className="material-worx-text">Custom Shop</h1>
     </a>
     </div>
