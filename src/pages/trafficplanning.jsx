@@ -4,6 +4,7 @@ import '../css/footer.css'
 import React, { useState } from 'react';
 import axios from 'axios';
 import MapPlanComponent from '../components/MapComponentPlan';
+import images from '../utils/tbsImages';
 import Header from '../components/headerviews/HeaderDropPlan'
 const states = [
   { abbreviation: 'AL', name: 'Alabama' },
@@ -216,7 +217,7 @@ Together, we can create safer roads, smoother traffic flow, and more resilient c
         >
     
           <div className="plan-form-container container--narrow page-section">
-          <img className="traffic-control-img" src="../public/buffer and tapers/tcp image.png" alt="Traffic Control Image"/>
+          <img className="traffic-control-img" src={images["../assets/buffer and tapers/tcp image.png"].default} alt="Traffic Control Image"/>
             <h1 className="plan-app-box">Traffic Control Plan Form</h1>
             <h2 className="plan-fill">Please Fill Out the Form Below to Submit Your Plan!</h2>
 
@@ -451,18 +452,18 @@ Together, we can create safer roads, smoother traffic flow, and more resilient c
       <footer className="footer">
       <div className="social-icons">
                 <a className="social-icon" href="https://www.facebook.com/tbssigns2022/" target="_blank" rel="noopener noreferrer">
-                    <img className="facebook-img" src="../public/social media/facebook.png" alt="Facebook" />
+                    <img className="facebook-img" src={images["../assets/social media/facebook.png"].default} alt="Facebook" />
                 </a>
                 <a className="social-icon" href="https://www.tiktok.com/@tbsmaterialworx?_t=8lf08Hc9T35&_r=1" target="_blank" rel="noopener noreferrer">
-                    <img className="tiktok-img" src="../public/social media/tiktok.png" alt="TikTok" />
+                    <img className="tiktok-img" src={images["../assets/social media/tiktok.png"].default} alt="TikTok" />
                 </a>
                 <a className="social-icon" href="https://www.instagram.com/tbsmaterialworx?igsh=YzV4b3doaTExcjN4&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img className="insta-img" src="../public/social media/instagram.png" alt="Instagram" />
+                    <img className="insta-img" src={images["../assets/social media/instagram.png"].default} alt="Instagram" />
                 </a>
             </div>
     <div className="site-footer__inner container container--narrow">
         <div className="footer-content">
-          <img className="tbslogo" alt="TBS logo" src="../public/tbs_companies/TBS Logo1.png" />
+          <img className="tbslogo" alt="TBS logo" src={images["../assets/tbs_companies/tbs.svg"].default} />
           <ul className="footer-navigate">
         <li><a className="footer-nav-link" href="/trafficcontrol">Traffic Control</a></li>
         <li><a className="footer-nav-link-view" href="">Traffic Control Plans</a></li>
@@ -485,7 +486,7 @@ Together, we can create safer roads, smoother traffic flow, and more resilient c
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src="../public/tbs_companies/TBS Logo1.png"></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
