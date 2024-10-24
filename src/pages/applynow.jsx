@@ -5,7 +5,7 @@ import '../css/footer.css';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-
+import images from '../utils/tbsImages';
 export default function Apply() {
   const [phone, setPhone] = useState('');
   const navigate = useNavigate();
@@ -94,8 +94,8 @@ export default function Apply() {
     }
     
       // Process submission success if no validation errors
-      setSubmissionMessage('Application Submitted! We will be with you within 48 hours!');
-      toast.success('Application Submitted! We will be with you within 48 hours!');
+      setSubmissionMessage('Application Submitted! We will be with you as soon as possible!');
+      toast.success('Application Submitted! We will be with you as soon as possible!');;
       navigate('/applynow');
     
     } catch (error) {
@@ -110,7 +110,7 @@ export default function Apply() {
     <div>
         <header className="header">
     <a className="header-logo" href="/">
-        <img alt="TBS logo" className="tbs-logo-img" src="../public/tbs_companies/TBS logo1.png" />
+        <img alt="TBS logo" className="tbs-logo-img" src={images["../assets/tbs_companies/tbs.svg"].default} />
     </a>
     <div className="mobile-nav-icon">
     <button className="mobile-nav" onClick={toggleMenu}>
@@ -121,15 +121,15 @@ export default function Apply() {
         <ul className="main-nav-list">
             <li><a className="main-nav-link" href="/trafficcontrol">Traffic Control</a></li>
             <li><a className="main-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
-            <li><a className="main-nav-link" href="/bollards">Bollards & Wheel Stops</a></li>
+            <li><a className="main-nav-link" href="/bollardswheels">Bollards & Wheel Stops</a></li>
             <li><a className="main-nav-link" href="/signs">Traffic Sign Manufacturing</a></li>
             <li><a className="main-nav-link" href="/ppe">PPE Sales</a></li>
             <li><a className="main-nav-link" href="/rentals">Equipment Rental & Sales</a></li>
         </ul>
     </nav>
     <div className="header-worx-links">
-    <a className="header-worx-logo" href="/materialworx">
-        <img className="material-worx-img"alt="Material WorX logo" src="../public/tbs_companies/material worx.png"/>
+    <a className="header-worx-logo" target="_blank" rel="noopener noreferrer" href="https://www.material-worx.com">
+        <img className="material-worx-img"alt="Material WorX logo" src={images["../assets/tbs_companies/Material WorX.svg"].default} />
         <h1 className="material-worx-text">Custom Shop</h1>
     </a>
     </div>
@@ -258,7 +258,7 @@ export default function Apply() {
               {errors.message && <div className="error-message">{errors.message}</div>}
             <h1 className="warning-message">If you have already submitted before, you will not be able to submit again. If you're a former
               employee for TBS and want your job back, please call (706) 263-0175. If you're new and just submitted, your information has already
-                 been received! We will be with you within 48 hours.</h1>
+                 been received!</h1>
             <button type="submit" className="btn btn--full submit-app">SUBMIT APPLICATION</button>
             
           </div>
@@ -283,18 +283,18 @@ export default function Apply() {
       <footer className="footer">
       <div className="social-icons">
                 <a className="social-icon" href="https://www.facebook.com/tbssigns2022/" target="_blank" rel="noopener noreferrer">
-                    <img className="facebook-img" src="../public/social media/facebook.png" alt="Facebook" />
+                    <img className="facebook-img" src={images["../assets/social media/facebook.png"].default} alt="Facebook" />
                 </a>
                 <a className="social-icon" href="https://www.tiktok.com/@tbsmaterialworx?_t=8lf08Hc9T35&_r=1" target="_blank" rel="noopener noreferrer">
-                    <img className="tiktok-img" src="../public/social media/tiktok.png" alt="TikTok" />
+                    <img className="tiktok-img" src={images["../assets/social media/tiktok.png"].default} alt="TikTok" />
                 </a>
                 <a className="social-icon" href="https://www.instagram.com/tbsmaterialworx?igsh=YzV4b3doaTExcjN4&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img className="insta-img" src="../public/social media/instagram.png" alt="Instagram" />
+                    <img className="insta-img" src={images["../assets/social media/instagram.png"].default} alt="Instagram" />
                 </a>
             </div>
     <div className="site-footer__inner container container--narrow">
         <div className="footer-content">
-          <img className="tbslogo" alt="TBS logo" src="../public/tbs_companies/TBS Logo1.png" />
+          <img className="tbslogo" alt="TBS logo" src={images["../assets/tbs_companies/tbs.svg"].default} />
           <ul className="footer-navigate">
         <li><a className="footer-nav-link" href="/trafficcontrol">Traffic Control</a></li>
         <li><a className="footer-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
@@ -317,7 +317,7 @@ export default function Apply() {
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src="../public/tbs_companies/TBS Logo1.png"></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
