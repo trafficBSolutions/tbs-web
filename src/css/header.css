@@ -216,23 +216,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 10px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: flex;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: auto; /* Push to the right */
     width: 100px; /* Adjust width */
     height: 30px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -359,25 +353,18 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 170px; /* Adjust width */
     height: 90px; /* Adjust height */
   }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
-  }
-
   .material-worx-text {
     padding-right: 5px; /* Adjust padding */
     font-size: 13px; /* Adjust font size */
@@ -504,23 +491,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 180px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -649,23 +630,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 300px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -795,23 +770,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 200px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -940,23 +909,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 200px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -1086,25 +1049,18 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 15px; /* Push to the right */
     width: 180px; /* Adjust width */
     height: 90px; /* Adjust height */
   }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
-  }
-
   .material-worx-text {
     padding-right: 5px; /* Adjust padding */
     font-size: 13px; /* Adjust font size */
@@ -1232,23 +1188,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 15px; /* Push to the right */
     width: 180px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -1377,23 +1327,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 188px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -1522,23 +1466,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 200px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -1779,23 +1717,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 195px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -1924,23 +1856,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 195px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -1960,23 +1886,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 195px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
@@ -2105,23 +2025,17 @@
 
   .header-worx-logo {
     text-decoration: none;
-    color: #a4f7ff;
     font-weight: 500;
     font-size: 15px; /* Adjust font size */
     font-family: "Kairos W04 Extended Bold";
     transition: all 0.3s;
     display: block;
     align-items: center;
-    background-color: #0f375a;
     border-radius: 5px; /* Adjust border-radius */
     padding: 5px 10px; /* Adjust padding */
     margin-left: 5px; /* Push to the right */
     width: 195px; /* Adjust width */
     height: 90px; /* Adjust height */
-  }
-
-  .header-worx-logo:hover {
-    background-color: #226daf;
   }
 
   .material-worx-text {
