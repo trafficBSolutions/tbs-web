@@ -4,6 +4,7 @@ import '../css/footer.css'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../components/headerviews/HeaderDropSigns'
+import images from '../utils/tbsImages';
 const states = [
   { abbreviation: 'AL', name: 'Alabama' },
   { abbreviation: 'AK', name: 'Alaska' },
@@ -410,50 +411,50 @@ const handleFileRemove = (fileType) => {
 <div className="sign-img-section">
   <div className="sign-group">
 <div className="sign-img-container">
-    <img src="../public/road signs/GA State Route 53.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/State Route.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">State Route Sign(M1-5)</h3>
   </div>
   <div className="sign-img-container">
-    <img src="../public/road signs/School Crossing.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/School Crossing.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">School Crossing Sign(S1-1)</h3>
   </div>
   <div className="sign-img-container">
-    <img src="../public/road signs/speed Limit.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/Speed Limit 18x24 (1).svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">Speed Limit Sign(R2-1)</h3>
   </div>
   </div>
   <div className="sign-group">
   <div className="sign-img-container">
-    <img src="../public/road signs/U.S Route 41.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/US Route.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">U.S Route Sign(M1-4)</h3>
   </div>
   <div className="sign-img-container">
-    <img src="../public/road signs/Utility Work Ahead.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/Utility Work.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">Utility Work Ahead Sign(W21-7)</h3>
   </div>
   <div className="sign-img-container">
-    <img src="../public/road signs/Interstate 75.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/Interstate.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">Interstate Sign(M1-1)</h3>
   </div>
   </div>
 
   <div className="sign-group">
   <div className="sign-img-container">
-    <img src="../public/road signs/Stop Sign.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/Stop.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">Stop Sign(R1-1)</h3>
   </div>
   <div className="sign-img-container">
-    <img src="../public/road signs/Yield.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/Yield (2).svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">Yield Sign(R1-2)</h3>
   </div>
   <div className="sign-img-container">
-    <img src="../public/road signs/ped crossing.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/Ped.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">Pedestrian Crossing Sign(W11-2)</h3>
   </div>
   </div>
 
   <div className="sign-img-container single-image">
-    <img src="../public/road signs/Street Sign.png" alt="sign" className="sign-img" />
+    <img src={images["../assets/road signs/Street Sign.svg"].default} alt="sign" className="sign-img" />
     <h3 className="sign-img-text">Street Sign(D1-1c)</h3>
   </div>
 </div>
@@ -624,7 +625,7 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
         specify which sign needs High Intensity Prismatic and which one needs Diamond Grade. Otherwise, choose the reflective 
         best for your signs.</h1>
         <div className="reflective-img-container">
-        <img className="reflective-img" src="../public/road signs/reflective differences.png" alt="reflective differences" />
+        <img className="reflective-img" src={images["../assets/road signs/reflective differences.png"].default} alt="reflective differences" />
         </div>
         <label className="reflective-select-label">Select Reflective *</label>
         <select
@@ -707,11 +708,11 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
 However, if you need a post for your traffic sign, PLEASE SELECT A POST!</h1>
 <div className="post-img-section">
   <div className="post-img-container">
-    <img src="../public/road signs/U Channel.png" alt="post" className="post-img" />
+    <img src={images["../assets/road signs/U Channel.png"].default} alt="post" className="post-img" />
     <h3 className="post-img-text">U Channel Post</h3>
   </div>
   <div className="post2-img-container">
-    <img src="../public/road signs/2x2 Square Post.png" alt="post" className="post-img" />
+    <img src={images["../assets/road signs/2x2 Square Post.png"].default} alt="post" className="post-img" />
     <h3 className="post2-img-text">2x2 Square Post</h3>
   </div>
   </div>
@@ -765,27 +766,27 @@ However, if you need a post for your traffic sign, PLEASE SELECT A POST!</h1>
 However, if you need a bracket for your street sign, PLEASE SELECT A BRACKET!</h1>
 <div className="bracket-img-section">
   <div className="bracket-img-container">
-    <img src="../public/road signs/5.5 Flat 180.jpg" alt="bracket" className="bracket-img" />
+    <img src={images["../assets/road signs/5.5 Flat 180.jpg"].default} alt="bracket" className="bracket-img" />
     <h3 className="bracket-img-text">5.5" Flat Blade for U Channel Post 180 Degree Cap with Hardware</h3>
   </div>
   <div className="bracket-img-container">
-    <img src="../public/road signs/5.5 90 Bracket.jpg" alt="bracket" className="bracket-img" />
+    <img src={images["../assets/road signs/5.5 90 Bracket.jpg"].default} alt="bracket" className="bracket-img" />
     <h3 className="bracket-img-text">5.5" Flat Blade for U Channel Post 90 Degree Cap with Hardware</h3>
   </div>
   <div className="bracket-img-container">
-    <img src="../public/road signs/5.5 90 Cross Bracket.jpg" alt="bracket" className="bracket-img" />
+    <img src={images["../assets/road signs/5.5 90 Cross Bracket.jpg"].default} alt="bracket" className="bracket-img" />
     <h3 className="bracket-img-text">5.5" Flat Blade for U Channel post 90 Degree Cap Cross Piece for Two street signs</h3>
   </div>
   <div className="bracket-img-container">
-    <img src="../public/road signs/12 Inch Flat Blade Cross.jpg" alt="bracket" className="bracket-img" />
+    <img src={images["../assets/road signs/12 Inch Flat Blade Cross.jpg"].default} alt="bracket" className="bracket-img" />
     <h3 className="bracket-img-text">12" Flat Blade HD Bracket Cross Piece with 2 Tapped Holes</h3>
   </div>
   <div className="bracket-img-container">
-    <img src="../public/road signs/12 Inch U Channel 180.jpg" alt="bracket" className="bracket-img" />
+    <img src={images["../assets/road signs/12 Inch U Channel 180.jpg"].default} alt="bracket" className="bracket-img" />
     <h3 className="bracket-img-text">12" for U Channel 180 Degree Cap</h3>
   </div>
   <div className="bracket-img-container">
-    <img src="../public/road signs/12 Inch U Channel 90 Degree.jpg" alt="bracket" className="bracket-img" />
+    <img src={images["../assets/road signs/12 Inch U Channel 90 Degree.jpg"].default} alt="bracket" className="bracket-img" />
     <h3 className="bracket-img-text">12" for U Channel 90 Degree Cap</h3>
   </div>
 </div>
@@ -848,7 +849,7 @@ the sign number in the Message. Note: You can only submit .png, .jpg, .jpeg file
           {formData.img ? (
             <span>{formData.img.name}</span>
           ) : (
-            <span>Choose Your Google Maps Screenshot Image</span>
+            <span>Choose Your Traffic Sign Screenshot Image</span>
           )}
           <input type="file" name="img" accept=".png,.jpg,.jpeg" onChange={(e) => handleFileChange(e, 'img')} />
           </label>
@@ -888,18 +889,18 @@ and what time you want a TBS crew will arrive.</h1>
       <footer className="footer">
       <div className="social-icons">
                 <a className="social-icon" href="https://www.facebook.com/tbssigns2022/" target="_blank" rel="noopener noreferrer">
-                    <img className="facebook-img" src="../public/social media/facebook.png" alt="Facebook" />
+                    <img className="facebook-img" src={images["../assets/social media/facebook.png"].default} alt="Facebook" />
                 </a>
                 <a className="social-icon" href="https://www.tiktok.com/@tbsmaterialworx?_t=8lf08Hc9T35&_r=1" target="_blank" rel="noopener noreferrer">
-                    <img className="tiktok-img" src="../public/social media/tiktok.png" alt="TikTok" />
+                    <img className="tiktok-img" src={images["../assets/social media/tiktok.png"].default} alt="TikTok" />
                 </a>
                 <a className="social-icon" href="https://www.instagram.com/tbsmaterialworx?igsh=YzV4b3doaTExcjN4&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img className="insta-img" src="../public/social media/instagram.png" alt="Instagram" />
+                    <img className="insta-img" src={images["../assets/social media/instagram.png"].default} alt="Instagram" />
                 </a>
             </div>
     <div className="site-footer__inner container container--narrow">
         <div className="footer-content">
-          <img className="tbslogo" alt="TBS logo" src="../public/tbs_companies/TBS Logo1.png" />
+          <img className="tbslogo" alt="TBS logo" src={images["../assets/tbs_companies/tbs.svg"].default} />
           <ul className="footer-navigate">
         <li><a className="footer-nav-link" href="/trafficcontrol">Traffic Control</a></li>
         <li><a className="footer-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
@@ -922,7 +923,7 @@ and what time you want a TBS crew will arrive.</h1>
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src="../public/tbs_companies/TBS Logo1.png"></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
