@@ -5,6 +5,7 @@ import '../css/footer.css'
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import images from '../utils/tbsImages';
 import Header from '../components/headerviews/HeaderDropRentals'
 const states = [
   { abbreviation: 'AL', name: 'Alabama' },
@@ -427,15 +428,15 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
        
         <div className="equipment-img-section">
   <div>
-    <img className="arrow-board-img" src="../public/message and arrow boards/arrow board.jpg"></img>
+    <img className="arrow-board-img" src={images["../assets/message and arrow boards/arrow board.jpg"].default}></img>
     <h3 className="equipment-name">Arrow Board</h3>
   </div>
   <div>
-    <img className="barrel-img" src="../public/buffer and tapers/barrel.jpg"></img>
+    <img className="barrel-img" src={images["../assets/buffer and tapers/barrel.jpg"].default}></img>
     <h3 className="equipment-name">Barrel</h3>
   </div>
   <div>
-    <img className="cone-img" src="../public/buffer and tapers/cone.jpeg"></img>
+    <img className="cone-img" src={images["../assets/buffer and tapers/cone.jpeg"].default}></img>
     <h3 className="equipment-name">Cone</h3>
   </div>
 </div>
@@ -444,15 +445,15 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
         
 <div className="equipment-img-section">
   <div>
-    <img className="roll-up-img" src="../public/buffer and tapers/roll-up-signs.png"></img>
+    <img className="roll-up-img" src={images["../assets/buffer and tapers/roll-up-signs.png"].default}></img>
     <h3 className="equipment-name">Roll-Up Sign</h3>
   </div>
   <div>
-    <img className="construction-sign-img" src="../public/buffer and tapers/hard road sign.png"></img>
+    <img className="construction-sign-img" src={images["../assets/buffer and tapers/hard road sign.png"].default}></img>
     <h3 className="equipment-name">Aluminum Construction Sign</h3>
   </div>
   <div>
-    <img className="message-board-img" src="../public/buffer and tapers/message board.jpg"></img>
+    <img className="message-board-img" src={images["../assets/buffer and tapers/message board.jpg"].default}></img>
     <h3 className="equipment-name">Message Board</h3>
   </div>
 </div>
@@ -560,25 +561,25 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
       <footer className="footer">
       <div className="social-icons">
                 <a className="social-icon" href="https://www.facebook.com/tbssigns2022/" target="_blank" rel="noopener noreferrer">
-                    <img className="facebook-img" src="../public/social media/facebook.png" alt="Facebook" />
+                    <img className="facebook-img" src={images["../assets/social media/facebook.png"].default} alt="Facebook" />
                 </a>
                 <a className="social-icon" href="https://www.tiktok.com/@tbsmaterialworx?_t=8lf08Hc9T35&_r=1" target="_blank" rel="noopener noreferrer">
-                    <img className="tiktok-img" src="../public/social media/tiktok.png" alt="TikTok" />
+                    <img className="tiktok-img" src={images["../assets/social media/tiktok.png"].default} alt="TikTok" />
                 </a>
                 <a className="social-icon" href="https://www.instagram.com/tbsmaterialworx?igsh=YzV4b3doaTExcjN4&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <img className="insta-img" src="../public/social media/instagram.png" alt="Instagram" />
+                    <img className="insta-img" src={images["../assets/social media/instagram.png"].default} alt="Instagram" />
                 </a>
             </div>
     <div className="site-footer__inner container container--narrow">
         <div className="footer-content">
-          <img className="tbslogo" alt="TBS logo" src="../public/tbs_companies/TBS Logo1.png" />
+          <img className="tbslogo" alt="TBS logo" src={images["../assets/tbs_companies/tbs.svg"].default} />
           <ul className="footer-navigate">
         <li><a className="footer-nav-link" href="/trafficcontrol">Traffic Control</a></li>
         <li><a className="footer-nav-link" href="/trafficplanning">Traffic Control Plans</a></li>
         <li><a className="footer-nav-link" href="/bollardswheels">Bollard & Wheel Stops</a></li>
         <li><a className="footer-nav-link" href="/signs">Traffic Sign Manufacturing</a></li>
         <li><a className="footer-nav-link" href="/ppe">PPE Sales</a></li>
-        <li><a className="footer-nav-link-view" href="#">Equipment Rental & Sales</a></li>
+        <li><a className="footer-nav-link-view" href="">Equipment Rental & Sales</a></li>
       </ul>
         </div>
         <div className="footer-contact">
@@ -594,7 +595,7 @@ onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                     accountability, and excellence, because when it comes to traffic control, there's no compromise on safety.
                 </p>
                 <p className="trademark-warning">
-                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src="../public/tbs_companies/TBS Logo1.png"></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
+                  <b className="warning-trade">WARNING:</b><b> Trademark Notice</b><img className="trademark-img" src={images["../assets/tbs_companies/tbs.svg"].default}></img> is a registered trademark of Traffic & Barrier Solutions, LLC. 
                   Unauthorized use of this logo is strictly prohibited and may result in legal action. 
                   All other trademarks, logos, and brands are the property of their respective owners.
                 </p>
