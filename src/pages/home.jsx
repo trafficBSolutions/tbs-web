@@ -9,21 +9,20 @@ export default function Home() {
     return (
       <div>
       <Header />
-          <main>
+                   <main>
           <div className="page-banner">
           <video className="page-banner__bg-vid-dash" autoPlay loop muted playsInline>
-            <source src={images["../assets/videos/trafficflow.mp4"].default} type="video/mp4"></source>
+            <source src={images["../assets/videos/TBS Roadblock Video.mp4"].default} type="video/mp4"></source>
           </video>
-          <div className="tbs-name-container">
-            <div className="tbs-name">TRAFFIC AND BARRIER SOLUTIONS, LLC</div>
-          </div>
+          <div className="tbs-container">
+        <img src={images['../assets/tbs_companies/tbs white.svg'].default} alt="Material WorX Logo" />
+    </div>
         </div>
         <section className="section-hero">
           <div className="hero">
             <div className="hero-text-box">
               <h1 className="heading-primary">
-                From Traffic Solutions to Traffic Signs, We've got
-                you covered!
+                TRAFFIC & BARRIER SOLUTIONS, LLC
               </h1>
               <p className="hero-description">
               Traffic & Barrier Solutions, LLC is a comprehensive traffic management and 
@@ -42,171 +41,108 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="veteran-owned">
-          <div className="veteran-owned-div">
-            <img className="veteran-owned-img" alt="veteran-owned" src={images["../assets/tbs_companies/Veteran Owned.svg"].default}>
-            </img>
+        <section className="section-how" id="how">
+<div className="home-services">
+  <div className="traffic-services">
+  <div className="background-how">
+    <h2>Traffic Control Services</h2>
+    <p className="traffic-services-description">
+      We specialize in providing comprehensive traffic control services for various
+      roadways, construction sites, and event venues. Our team of experienced professionals
+      is equipped to handle a wide range of traffic control needs, ensuring the safety and
+      efficiency of traffic flow.
+    </p>
+    <div className="traffic-services-content">
+    <li>Work Zone Setups</li>
+    <li>Traffic Control Plans</li>
+    <li>Road Closures & Detours</li>
+    <li>Flagging Operations</li>
+    <li>Lane Closures & Shifts</li>
+    <li>Rolling Road Blocks</li>
+    <li>Temporary Traffic Signals</li>
+    <li>Pedestrian and Cyclist Management</li>
+    <li>Traffic Signage Installation</li>
+    <li>Emergency Traffic Control</li>
+    <li>Traffic Control Equipment Rentals</li>
+    <li>Event Traffic Management</li>
+    <li>Incident Response & Support</li>
+    <li>Parking Lot Management</li>
+    <li>Barrier and Barricade Placement</li>
+    <li>Speed Control Measures</li>
+    <li>Advanced Warning Signs</li>
+</div>
+<a href="/traffic-control-services" className="btn -- btn-traffic">Traffic Control Services</a>
+</div>
+    </div>
+    <div className="man-services">
+      <div className="background-how-man">
+      <h2>Equipment Manufacturing & Installation Services</h2>
+      <p className="man-services-description">
+        Our team of skilled professionals is dedicated to providing top-quality
+        traffic control equipment manufacturing and installation services. We specialize in
+        the production and installation of a wide range of traffic control equipment,
+        including traffic signs, bollards, barricades, and more.
+        </p>
+      <div className="man-services-content">
+    <li>Custom Traffic Sign Manufacturing</li>
+    <li>Traffic Sign Recycling & Refurbishing</li>
+    <li>Parking Lot Signage</li>
+    <li>Bollard Installation</li>
+    <li>Road Marking & Line Striping</li>
+    <li>Safety Equipment Supply (e.g., Safety Vests, Hard Hats)</li>
+    <li>Parking Lot Wheel Stops Installation</li>
+    <li>Barricade Installation</li>
+    <li>Speed Bump Installation</li>
+    <li>Sign Post Installation & Repair</li>
+    <li>Construction Zone Safety Products</li>
+</div>
+<button  className="btn -- btn-product">Product Services</button>
+</div>
+</div>
+      
+      </div>
+      <section className="section-jobs">
+        <div className="jobs-container">
+          <div className="job-year-content">
+            <h1 className="established-year">
+              2019
+              </h1>
+              <h1 className="established-year-text">
+                Year Established
+                </h1>
           </div>
-        </section>
-        <section className="now-hiring">
-          <div className ="container">
-            <h1 className ="hiring-tbs">NOW HIRING</h1>
-            <h2 className="workfor">Want to Work for TBS? Click here to apply:</h2>
-            <a href="/applynow" className="btn btn--full applybutton">APPLY NOW</a>
+          <div className="sign-content">
+            <h1 className="sign-established">
+              700+
+            </h1>
+            <h1 className="sign-established-text">
+              Traffic Signs Installed</h1>
+            </div>
+            <div className="plan-content">
+              <h1 className="plan-established">
+                150+
+                </h1>
+                <h1 className="plan-established-text">
+                  Traffic Control Plans Designed</h1>
+                  </div>
+                  <div className="control-job-content">
+                    <h1 className="control-job-established">
+                      20,000+
+                      </h1>
+                      <h1 className="control-job-established-text">
+                        Traffic Control Jobs Completed</h1>
+                        </div>
           </div>
-        </section>
+      </section>
+  </section>
         <section className="section-featured">
-          <div className="container">
+          <div className="map-contain-home">
+            <MapComponent />
+          </div>
+          <div className="container-photos">
             <div className="gallery-container">
               <HomePhotoGallery /> {/* Render the photo gallery here */}
             </div>
-          </div>
-        </section>
-        <section className="section-how" id="how">
-        
-          <div className="container">
-            <span className="subheading">What We Do</span>
-            <h2 className="heading-secondary">
-            You can choose from what we do.
-            </h2>
-          </div>
-          
-          <div className="container grid grid--2-cols grid--center-v">
-  
-            <div className="step-text-box">
-              <p className="step-number">01</p>
-              <h3 className="heading-tertiary">TRAFFIC CONTROL</h3>
-              <p className="step-description">
-              Traffic Control is responsible for providing various services related to traffic management and control. 
-              These jobs play a crucial role in ensuring the safety and efficiency of transportation infrastructure, 
-              particularly in construction zones, events, or other situations where traffic flow needs to be managed or redirected so that
-              the utility company or excavating company can meet the needs of the project.
-              </p>
-            </div>
-  
-            <div className="step-img-box">
-              <img
-                src={images["../assets/buffer and tapers/trafficset5.jpg"].default}
-                className="step-img"
-                alt="iPhone app
-              preferences selection screen"
-              />
-            </div>
-  
-            
-            <div className="step-text-box">
-              <p className="step-number">02</p>
-              <h3 className="heading-tertiary">TRAFFIC CONTROL PLANS</h3>
-              <p className="step-description">
-              Traffic Control Plans (TCPs) are detailed documents that outline 
-              the specific measures and strategies for managing traffic flow in a designated area, 
-              such as construction zones, work areas, or special events. 
-              These plans are essential for ensuring the safety of both motorists and workers, 
-              as well as maintaining the efficient operation of transportation infrastructure.
-              </p>
-            </div>
-            <div className="step-img-box">
-              <img
-                src={images["../assets/buffer and tapers/tcp image.png"].default}
-                className="step-img"
-                alt="iPhone app
-              meal approving plan screen"
-              />
-            </div>
-            <div className="step-text-box">
-              <p className="step-number">03</p>
-              <h3 className="heading-tertiary">BOLLARD/WHEEL STOP INSTALLATION</h3>
-              <p className="step-description">
-              Bollards are short, sturdy vertical posts typically made of metal, concrete, or other durable materials. 
-              They are installed in various environments to serve different purposes, primarily related to traffic management, safety, and security.
-              </p>
-            </div>
-            <div className="step-img-box">
-              <img
-                src={images["../assets/bollards/bollards.jpg"].default}
-                className="step-img"
-                alt="iPhone app
-              delivery screen"
-              />
-            </div>
-          </div>
-        </section>
-  
-        <section className="section-how">
-          
-          <div className="container grid grid--2-cols grid--center-v">
-  
-            <div className="step-text-box">
-              <p className="step-number">04</p>
-              <h3 className="heading-tertiary">TRAFFIC SIGN MANUFACTURING/INSTALLATION</h3>
-              <p className="step-description">
-              Traffic signs provide essential information to drivers, pedestrians, and cyclists, 
-              helping them navigate roadways safely and efficiently. Clear and visible signage warns of potential hazards, 
-              regulates traffic flow, provides directions, and alerts road users to regulatory requirements, 
-              thereby reducing the risk of accidents and injuries. 
-              </p>
-            </div>
-  
-            <div className="step-img-box">
-              <img
-                src={images["../assets/road signs/citylimit.jpg"].default}
-                className="step-img"
-                alt="iPhone app
-              preferences selection screen"
-              />
-            </div>
-  
-            
-            <div className="step-text-box">
-              <p className="step-number">05</p>
-              <h3 className="heading-tertiary">PPE SALES</h3>
-              <p className="step-description">
-              Personal Protective Equipment (PPE) is the specialized clothing, gear, and accessories designed to 
-              protect individuals from various hazards and risks in the workplace or other environments. 
-              PPE includes items such as Hard Hats, High-Visibility Vests, High-Visibility Jackets, 
-              High-Visibility T-Shirts, and more. You can choose from a wide variety of PPE items with your company's logo to enhance 
-              the professional appearance of your employees. 
-              It conveys a sense of cohesion and unity within the workforce, reinforcing the company's identity and values.
-              </p>
-            </div>
-            <div className="step-img-box">
-              <img
-                src={images["../assets/ppes/vests.jpg"].default}
-                className="step-img"
-                alt="iPhone app
-              meal approving plan screen"
-              />
-            </div>
-  
-            <div className="step-text-box">
-              <p className="step-number">06</p>
-              <h3 className="heading-tertiary">EQUIPMENT RENTAL & SALES</h3>
-              <p className="step-description">
-              Equipment Rental & Sales can be a cost effective way to rent equipment for your project. You can temporarily 
-              use offers that can give a convenient, cost-effective, and compliant solution for managing traffic flow, enhancing safety, 
-              and communicating important information during short-term projects, events, or emergencies.
-              </p>
-            </div>
-            <div className="step-img-box">
-              <img
-                src={images["../assets/message and arrow boards/arrow board2.png"].default}
-                className="step-img"
-                alt="iPhone app
-              delivery screen"
-              />
-            </div>
-          </div>
-        </section>
-        <section className="web-dev">
-          <div className ="container">
-            <h1 className ="web-tbs">LIKE OUR WEBSITE DESIGN?</h1>
-            <h2 className="will-web">We can help your website stand out:</h2>
-            <a href="/web-development" className="btn btn--full web-button">WEB DEVELOPMENT</a>
-          </div>
-          <div className="web-dev-creator">
-            <h1 className="web-dev-creator-title">
-              TBS Website Created By William Rowell
-            </h1>
           </div>
         </section>
       </main>
