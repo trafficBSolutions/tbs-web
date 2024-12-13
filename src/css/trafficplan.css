@@ -30,7 +30,12 @@
     padding: 0 20px;
     box-sizing: border-box;
 }
-
+.error-message, .submission-error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
   .plan-now {
     margin: 0 auto;
     font-size: 100px;
