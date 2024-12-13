@@ -36,6 +36,15 @@
   url("https://db.onlinewebfonts.com/t/f1d461b4bad8f8aac1730a9e629e702d.ttf")format("truetype"),
   url("https://db.onlinewebfonts.com/t/f1d461b4bad8f8aac1730a9e629e702d.svg#Highway Gothic Narrow")format("svg");
 }
+@font-face {
+  font-family: "Moveo Sans W00 Bold";
+  src: url("https://db.onlinewebfonts.com/t/82baa4951eee7df05175ada4cb171e35.eot");
+  src: url("https://db.onlinewebfonts.com/t/82baa4951eee7df05175ada4cb171e35.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/82baa4951eee7df05175ada4cb171e35.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/82baa4951eee7df05175ada4cb171e35.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/82baa4951eee7df05175ada4cb171e35.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/82baa4951eee7df05175ada4cb171e35.svg#Moveo Sans W00 Bold")format("svg");
+}
 
 /* Common styles for all devices */
 * {
