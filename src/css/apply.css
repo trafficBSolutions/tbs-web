@@ -138,6 +138,11 @@
   height: 20rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+.submit-app {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+}
 @media screen and (max-width: 1200px) and (orientation: landscape) {
   .apply-now {
     font-size: 6rem;
