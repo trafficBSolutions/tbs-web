@@ -52,12 +52,25 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+label {
+  font-size: 18px;
+  color: #5a270f;
+  margin-bottom: 5px;
+  display: block;
+}
 html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
-
+input[type=text], input[type=number], select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
 /* Font faces */
 
 /* Body styles */
@@ -68,31 +81,16 @@ body {
   color: #555;
   overflow-x: hidden;
 }
-label {
-    font-size: 18px;
-    color: #5a270f;
-    margin-bottom: 5px;
-    display: block;
-}
+
 /* General reusable components */
 .container {
-  max-width: 120rem;
-  padding: 0 3.2rem;
+  max-width: 1200px;
+  padding: 0 2rem;
   margin: 0 auto;
-}
-input[type=text], input[type=number], select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
 }
 .grid {
   display: grid;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
+  gap: 1.6rem;
 }
 .web-dev-creator-title {
   font-size: 4rem;
@@ -106,55 +104,59 @@ input[type=text], input[type=number], select, textarea {
   margin-bottom: 9.6rem;
 }
 
-
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid--center-v {
+.grid--center {
   align-items: center;
+  justify-items: center;
 }
 
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
   font-weight: 700;
-  color: #333;
   letter-spacing: -0.5px;
+  text-align: center;
 }
 
 .heading-primary {
-  font-size: 5.2rem;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
+  font-size: 4rem;
+  color: #ffffff;
+  
+  margin-bottom: 1.6rem;
   font-family: "Kairos W04 Extended Bold";
 }
-
 .heading-secondary {
-  font-size: 4.4rem;
-  line-height: 1.2;
-  margin-bottom: 9.6rem;
+  font-size: 3.2rem;
+  color: #333;
 }
 
 .heading-tertiary {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 3.2rem;
+  font-size: 2.4rem;
+  color: #555;
+}
+.image-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.subheading {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #cf711f;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.submit-app {
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -169,11 +171,18 @@ input[type=text], input[type=number], select, textarea {
     font-size: 1.2rem;
     cursor: pointer;
 }
-.btn--full {
-    width: 100%;
-    max-width: 250px;
-    margin: 10px auto;
+.btn:hover {
+  background-color: #d35400;
 }
+.btn--full {
+  width: 100%;
+  max-width: 250px;
+  margin: 10px auto;
+}
+.btn--small {
+  font-size: 1.6rem;
+}
+
 /* Home img section */
 .name-container {
   position: relative;
@@ -205,30 +214,22 @@ input[type=text], input[type=number], select, textarea {
   transform: translate(-50%, -50%);
 }
 
-.gallery-navigation-arrow-left {
-  background-color: #e67e22;
-  position: relative;
-  font-size: 60px;
-  margin-bottom: 30px;
-  margin: 0 auto;
-  display: block;
-  width: fit-content;
-  color: #fff;
-  font-family: "Kairos W04 Extended Bold";
-}
+.gallery-navigation-arrow-left,
 .gallery-navigation-arrow-right {
   background-color: #e67e22;
-  position: relative;
-  font-size: 60px;
-  margin-bottom: 30px;
-  margin: 0 auto;
-  display: block;
-  width: fit-content;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
   color: #fff;
-  font-family: "Kairos W04 Extended Bold";
+  transition: background-color 0.3s;
 }
 
-
+.gallery-navigation-arrow-left:hover,
+.gallery-navigation-arrow-right:hover {
+  background-color: #cf711f;
+}
 /* Reset styles for larger screens */
   .tbs-name {
     font-family: "Kairos W04 Extended Bold";
@@ -242,15 +243,16 @@ input[type=text], input[type=number], select, textarea {
     bottom: 0;
     left: 0;
     right: 0;
+    margin: auto;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
   }
   .page-banner {
-    padding: 80px 0 40px 0;
+    padding: 300px 0 40px;
     position: relative;
     overflow: hidden;
-    padding-top: 300px;
   }
   .hiring-tbs, .web-tbs {
     font-size: 100px;
@@ -300,26 +302,90 @@ input[type=text], input[type=number], select, textarea {
 }
 
 /* Hero section */
-.section-hero {
-  background-color: #fdf2e9;
-  padding: 10px;
+.section-how {
+  color: #000;
+  background-color: #e67d228e;
+  text-align: center;
 }
-
+.background-how, .background-how-man {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+.background-how {
+  background-color: rgba(128, 70, 20, 0.781); /* Adjust opacity as needed */
+}
+.background-how-man {
+  background-color: rgba(0, 0, 0, 0.781); /* Adjust opacity as needed */
+}
+.subheading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.home-services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+.traffic-services {
+  background: url(../assets/flaggers/trafficset5.jpg) center center / cover no-repeat;
+}
+.traffic-services-description, .man-services-description {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.man-services {
+  background: url(../assets/flaggers/arrowboard.png) center center / cover no-repeat;
+}
+.traffic-services, .man-services {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.traffic-services h2, .man-services h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.traffic-services li, .man-services li {
+  margin: 5px 0;
+  font-size: 1.7rem;
+  padding: 8px;
+  border-radius: 5px;
+}
+.btn-traffic, .btn-product {
+  margin: 0 auto;
+  display: flex;
+  font-size: 4rem;
+  max-width: 500px;
+}
+.traffic-services-content, .man-services-content {
+  margin-bottom: 4rem;
+}
+.section-hero {
+  background-color: #e67e22;
+  padding: 2rem;
+}
 .hero {
-  max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
   display: flex;
   grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
+  gap: 10rem;
   align-items: center;
 }
 
 .hero-description {
   font-size: 2rem;
   line-height: 1.6;
-  margin-bottom: 4.8rem;
-  font-family: "Moveo Sans W00 Regular";
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .trafficbarrels {
@@ -364,10 +430,6 @@ input[type=text], input[type=number], select, textarea {
   height: 400px;
 }
 
-/* How it works section */
-.section-how {
-  padding: 9.6rem 0;
-}
 
 .step-number {
   font-size: 8.6rem;
@@ -377,8 +439,9 @@ input[type=text], input[type=number], select, textarea {
 }
 
 .step-description {
-  font-size: 1.8rem;
-  line-height: 1.8;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #555;
 }
 
 .step-img-box {
@@ -390,35 +453,118 @@ input[type=text], input[type=number], select, textarea {
 .photo-note {
   font-size: 50px;
     text-align: center;
-    font-family: "Kairos W04 Extended Bold";
+    font-family: "Arial Black", Gadget, sans-serif;
 }
+.material-installation {
+  padding: 20px;
+  background-color: #FAF0CA;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  justify-content: space-evenly; /* More balanced spacing */
+  flex-wrap: wrap;
+}
+
+.installation, .maintenance {
+  flex: 1;
+  padding: 15px; /* Slightly reduced padding for a cleaner look */
+  max-width: 360px; /* Reduced max-width to avoid excessive empty space */
+}
+
+.material-installation h2 {
+  font-size: 26px; /* Slightly smaller to keep the design simple */
+  margin-bottom: 16px;
+}
+
+.installation h3, .maintenance h3 {
+  font-size: 22px; /* Smaller for a more balanced look */
+  margin-bottom: 8px;
+}
+
+.installation p, .maintenance p {
+  font-size: 15px; /* Reduced slightly for simplicity */
+  margin-bottom: 8px;
+}
+
+.installation ul, .maintenance ul {
+  list-style: none;
+  padding: 0;
+}
+
+.installation ul li, .maintenance ul li {
+  background: #f0f0f0; /* Slightly lighter background for better contrast */
+  margin: 6px 0; /* Consistent margin for better spacing */
+  font-size: 1.3rem; /* Slightly smaller font for better readability */
+  padding: 8px; /* Less padding for a sleeker design */
+  border-color: #000;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px; /* Smaller radius for a subtle rounded effect */
+}
+
 .gallery {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px auto 0;
   align-items: center;
-  max-width: 1000px;
+  margin-top: 20px;
 }
 .navigation-buttons {
   display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 15px;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.gallery-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .gallery-item {
   flex: 1;
-  max-width: 45%;
+  width: 550px; /* Fixed width */
+  height: 550px; /* Fixed height */
+  overflow: hidden;
+  border-radius: 8px;
 }
 .gallery-item img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fill the area */
 }
 .section-featured {
-  padding: 3.2rem 0 3.2rem 0;
   background-color: #fdf2e9;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.map-h1 {
+  font-size: 50px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-align: center;
+}
+.container-photos {
+  background-color: #FAF0CA;
+  width: auto;
+  height: auto;
+  flex: 1;
+}
+.map-contain-home {
+  width: 100%;
+    border: none;
+    background-color: silver;
+    flex: 1;
+}
+.map-container-home {
+  border-color: #000;
+    max-width: 1100px;
+    flex: 1;
+    margin: 0 auto;
+    border-style: solid;
 }
 .step-img2-box {
   position: relative;
@@ -463,183 +609,431 @@ input[type=text], input[type=number], select, textarea {
   background-color: #dbdbdb;
   text-align: center;
 }
+.jobs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #ccc;
+  padding: 50px;
+}
 
-@media screen and (min-width: 240px) and (max-width:320px) and (orientation: portrait) {
-  .tbs-name {
+.job-year-content, 
+.sign-content,
+.plan-content,
+.control-job-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.established-year, 
+.sign-established,
+.plan-established,
+.control-job-established {
+  font-size: 8rem;
+  font-family: "Moveo Sans W00 Bold";
+  font-weight: 600;
+  color: #cf711f;
+  margin-bottom: 1.6rem;
+}
+.established-year-text,
+.sign-established-text,
+.plan-established-text,
+.control-job-established-text {
+  font-size: 3rem;
+  line-height: 1.8;
+}
+.tbs-container {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+.tbs-container img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+.map-container-home {
+  height: 600px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1800px) and (orientation: landscape) {
+  .tbs-container img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+  }
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .page-banner {
+    padding: 100px 0;
+  }
+  .page-banner__bg-vid-dash {
+    width: 100%;
+    height: auto;
+  }
+  .hero {
+    padding: 0;
+  }
+  .tbs-container img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+  .heading-primary {
     font-size: 2.5rem;
   }
-  .page-banner {
-    padding-top: 90px;
+  .hero-description {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .traffic-services h2, .man-services h2 {
+    font-size: 2.5rem;
 }
-.veteran-description {
-  font-size: 30px;
+.background-how, .background-how-man {
+  padding: 30px;
 }
-.heading-primary {
-  font-size: 3rem;
-  text-align: center;
-  align-self: start;
+.traffic-services-description, .man-services-description {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
-
-.heading-tertiary {
+.jobs-container {
+  padding: 10px;
+}
+.traffic-services li, .man-services li  {
+  font-size: 1.4rem;
+}
+.established-year, .sign-established, .plan-established, .control-job-established {
+  font-size: 4.6rem;
+  margin: 0 auto;
+}
+.established-year-text, .sign-established-text, .plan-established-text, .control-job-established-text {
+  font-size: 1.3rem;
+}
+.btn-traffic, .btn-product {
   font-size: 2rem;
-  line-height: 1.2;
-  margin-bottom: 3.2rem;
 }
 
-.hiring-tbs {
-  font-size: 50px;
-  
+.map-h1, .photo-note {
+  font-size: 4rem;
+  padding: 10px;
 }
-.photo-note {
-  font-size: 30px;
+.gallery {
+  max-width: 350px;
+  margin: 0 auto;
 }
-.applybutton {
-  font-size: 20px;
-  text-align: center;
+.gallery-item {
+  height: auto;
 }
-.web-tbs {
-  font-size: 30px;
-}
-.web-button {
-  font-size: 13px;
-  text-align: center;
-}
-.veteran-owned-img {
-  width: 100%;
-}
-}
+.map-contain-home {
 
-@media screen and (min-width: 240px) and (max-width:320px) and (orientation: landscape) {
-  .tbs-name {
+  margin: 0 auto;
+  height: auto;
+}
+.map-container-home {
+  height: 200px;
+}
+}
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+  .page-banner {
+    padding: 100px 0;
+  }
+  .page-banner__bg-vid-dash {
+    width: 100%;
+    height: auto;
+  }
+  .hero {
+    padding: 0;
+  }
+  .tbs-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .heading-primary {
     font-size: 2.5rem;
   }
+  .hero-description {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .traffic-services h2, .man-services h2 {
+    font-size: 2.5rem;
+}
+.background-how, .background-how-man {
+  padding: 30px;
+}
+.traffic-services-description, .man-services-description {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.jobs-container {
+  padding: 10px;
+}
+.traffic-services li, .man-services li  {
+  font-size: 1.4rem;
+}
+.established-year, .sign-established, .plan-established, .control-job-established {
+  font-size: 4.6rem;
+  margin: 0 auto;
+}
+.established-year-text, .sign-established-text, .plan-established-text, .control-job-established-text {
+  font-size: 1.3rem;
+}
+.btn-traffic, .btn-product {
+  font-size: 2rem;
+}
+
+.map-h1, .photo-note {
+  font-size: 4rem;
+  padding: 10px;
+}
+.gallery {
+  max-width: 350px;
+  margin: 0 auto;
+}
+.gallery-item {
+  height: auto;
+}
+.map-container-home {
+  height: 300px;
+}
+}
+@media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+  .page-banner {
+    padding: 100px 0;
+  }
+  .page-banner__bg-vid-dash {
+    width: 100%;
+    height: auto;
+  }
+  .hero {
+    padding: 0;
+  }
+  .heading-primary {
+    font-size: 2.5rem;
+  }
+  .hero-description {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .traffic-services h2, .man-services h2 {
+    font-size: 2.5rem;
+}
+.background-how, .background-how-man {
+  padding: 10px;
+}
+.traffic-services-description, .man-services-description {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.traffic-services li, .man-services li {
+  padding: 3px;
+}
+.jobs-container {
+  padding: 10px;
+}
+.traffic-services li, .man-services li  {
+  font-size: 1.4rem;
+}
+.established-year, .sign-established, .plan-established, .control-job-established {
+  font-size: 2.2rem;
+  margin: 0 auto;
+}
+.established-year-text, .sign-established-text, .plan-established-text, .control-job-established-text {
+  font-size: 1rem;
+}
+.btn-traffic, .btn-product {
+  font-size: 2rem;
+}
+.map-h1, .photo-note {
+  font-size: 2.5rem;
+  padding: 10px;
+}
+.gallery {
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+.gallery-item {
+  width: 120%;
+  height: 100px;
+}
+.map-container-home {
+  height: 300px;
+  margin: 0 auto;
+}
+.map-contain-home {
+  width: 70%;
+}
+}
+@media screen and (max-width: 320px) and (orientation: landscape){
+  .hero {
+    padding: 0;
+  }
+
   .page-banner {
     padding-top: 90px;
 }
-.veteran-description {
-  font-size: 43px;
+.background-how, .background-how-man {
+  padding: 0;
 }
 .heading-primary {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   align-self: start;
 }
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0;
+}
+.btn-traffic, .btn-product {
+  font-size: 2rem;
+}
+.jobs-container {
+  padding: 0;
+  display: block;
 
-.hiring-tbs {
-  font-size: 50px;
+}
+.job-year-content, .sign-content, .plan-content, .control-job-content {
+  display: block;
+  padding: 15px;
+}
+.established-year, .sign-established, .plan-established, .control-job-established {
+  font-size: 4rem;
+  margin: 0;
+}
+.established-year-text, .sign-established-text, .plan-established-text, .control-job-established-text {
+  font-size: 2rem;
+}
+.section-featured {
+  display: block;
+}
+.map-h1, .photo-note {
+  font-size: 3rem;
+  text-align: center;
+}
+.map-container-home  {
+  height: 200px;
+}
+.gallery {
+  display: block;
+  gap: 0;
+  margin-top: 0;
   
 }
-.photo-note {
-  font-size: 30px;
+.footer-title {
+  font-size: 2.5rem;
 }
-.applybutton {
-  font-size: 20px;
-  text-align: center;
-}
-.web-tbs {
-  font-size: 35px;
-}
-.web-button {
-  font-size: 18px;
-  text-align: center;
-}
-.veteran-owned-img {
+.gallery-item {
   width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+.traffic-services h2, .man-services h2 {
+  font-size: 2.5rem;
+}
+.traffic-services-description, .man-services-description {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.traffic-services li, .man-services li {
+  font-size: 1.2rem;
+}
+.statement, .trademark-warning {
+  font-size: 1.2rem;
+}
+.contact-info a {
+  font-size: 1.3rem;
+}
+.footer-nav-link {
+  font-size: 1.5rem;
 }
 }
-
-@media screen and (min-width: 353px) and (max-width: 745px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .tbs-name {
-    font-size: 2.5rem;
+@media screen and (max-width: 320px) and (orientation: portrait){
+  .hero {
+    padding: 0;
   }
+
   .page-banner {
     padding-top: 90px;
 }
-.veteran-description {
-  font-size: 48px;
+.background-how, .background-how-man {
+  padding: 0;
 }
-.hiring-tbs {
-  font-size: 70px;
-  
+.heading-primary {
+  font-size: 2rem;
+  text-align: center;
+  align-self: start;
 }
-.heading-tertiary {
-  font-size: 20px;
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0;
 }
-.applybutton {
-  font-size: 40px;
+.btn-traffic, .btn-product {
+  font-size: 2rem;
+}
+.jobs-container {
+  padding: 0;
+  display: block;
+
+}
+.job-year-content, .sign-content, .plan-content, .control-job-content {
+  display: block;
+  padding: 15px;
+}
+.established-year, .sign-established, .plan-established, .control-job-established {
+  font-size: 4rem;
+  margin: 0;
+}
+.established-year-text, .sign-established-text, .plan-established-text, .control-job-established-text {
+  font-size: 2rem;
+}
+.section-featured {
+  display: block;
+}
+.map-h1, .photo-note {
+  font-size: 3rem;
   text-align: center;
 }
-.web-tbs {
-  font-size: 50px;
+.map-container-home  {
+  height: 200px;
 }
-.web-button {
-  font-size: 25px;
-  text-align: center;
-}
-.veteran-owned-img {
-  width: 100%;
-}
-.web-dev-creator-title {
-  font-size: 35px;
-}
-}
-
-@media screen and (min-width: 360px) and (max-width:640px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-    .tbs-name {
-      font-size: 6.8rem;
-    }
-    .veteran-owned-img {
-      width: 100%;
-    }
-}
-
-@media screen and (min-width: 412px) and (max-width:823px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .tbs-name {
-    font-size: 2.6rem;
-  }
-  .veteran-owned-img {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 400px) and (max-width:830px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  .tbs-name {
-    font-size: 5.8rem;
-  }
-  .veteran-owned-img {
-    width: 100%;
-  }
-}
-
-
-@media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .tbs-name {
-    font-size: 3.2rem;
-  }
-  .page-banner {
-    padding-top: 90px;
-}
-
-.hiring-tbs {
-  font-size: 80px;
+.gallery {
+  display: block;
+  gap: 0;
+  margin-top: 0;
   
 }
-
-.applybutton {
-  font-size: 60px;
-  text-align: center;
+.footer-title {
+  font-size: 2.5rem;
 }
-.veteran-owned-img {
+.gallery-item {
   width: 100%;
+  height: 100%;
+  max-width: 500px;
 }
+.traffic-services h2, .man-services h2 {
+  font-size: 2.5rem;
 }
-
-@media screen and (min-width: 800px) and (max-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  .tbs-name {
-    font-size: 6.8rem;
-  
+.traffic-services-description, .man-services-description {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
-.veteran-owned-img {
-  width: 100%;
+.traffic-services li, .man-services li {
+  font-size: 1.2rem;
+}
+.statement, .trademark-warning {
+  font-size: 1.2rem;
+}
+.contact-info a {
+  font-size: 1.3rem;
+}
+.footer-nav-link {
+  font-size: 1.5rem;
 }
 }
