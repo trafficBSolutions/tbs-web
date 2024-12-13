@@ -134,7 +134,7 @@ export default function Apply() {
     </a>
     </div>
 </header>
-      <main className="apply-main">
+           <main className="apply-main">
         <div className="apply-container">
           <h1 className="apply-now">CAREERS</h1>
           <h2 className="descript">Discover a career with TBS,
@@ -153,11 +153,12 @@ export default function Apply() {
         >
 
           <div className="job-container container--narrow page-section">
-
-            <h1 className="job-app-box">Job Application Form</h1>
+      <div className="job-app-info">
+            <h1 className="job-app-box">JOB APPLICATION FORM</h1>
             <h2 className="job-fill">Please Fill Out the Form Below to Submit Your Job Application!</h2>
-
-            <label className="name">Name: </label>
+    </div>
+    <div className="job-actual">
+      <div className="job-name">
             <div className="first-input">
 
               <div className="first-name">
@@ -177,8 +178,8 @@ export default function Apply() {
                 {errors.last && <div className="error-message">{errors.last}</div>}
               </div>
             </div>
-            <label className="emailphone-label">Email/Phone Number:</label>
-
+            </div>
+            <div className="job-emailphone">
             <div className="emailphone-input">
 
               <div className="email">
@@ -206,10 +207,10 @@ export default function Apply() {
                 {errors.phone && <div className="error-message">{errors.phone}</div>}
               </div>
             </div>
-
-            <label className="resume-label">Resume/Cover Letter:</label>
-            <h1 className="resume-note">Note: You can only submit .doc, .pdf, .txt, and .pages files. Your resume is required before you submit.
-              Cover letters are optional but are recommended. </h1>
+            </div>
+            <div className="job-resume">
+            <h2 className="resume-note"><b className="resume-note-b">NOTE:</b> You can only submit .doc, .pdf, .txt, and .pages files. Your resume is required before you submit.
+              Cover letters are optional but are recommended. </h2>
             <div className="resume-input">
               <div className="resume-section">
                 <div className="name-input">
@@ -219,12 +220,12 @@ export default function Apply() {
                       {data.resume ? (
                         <span>{data.resume.name}</span>
                       ) : (
-                        <span>Choose Resume</span>
+                        <span>CHOOSE RESUME</span>
                       )}
                       <input type="file" name="resume" accept=".pdf,.doc,.docx,.txt,.page" onChange={(e) => handleFileChange(e, 'resume')} />
                     </label>
                     {data.resume && (
-                      <button type="button" className="remove-apply-file-button" onClick={() => handleFileRemove('resume')}>Remove</button>
+                      <button type="button" className="remove-apply-file-button" onClick={() => handleFileRemove('resume')}>REMOVE</button>
                     )}
                   </div>
                   {errors.resume && <div className="error-message">{errors.resume}</div>}
@@ -239,44 +240,45 @@ export default function Apply() {
                     {data.cover ? (
                       <span>{data.cover.name}</span>
                     ) : (
-                      <span>Choose Cover Letter</span>
+                      <span>CHOOSE COVER LETTER</span>
                     )}
                     <input type="file" name="cover" accept=".pdf,.doc,.docx,.txt,.page" onChange={(e) => handleFileChange(e, 'cover')} />
                   </label>
                   {data.cover && (
-                    <button type="button" className="remove-apply-file-button" onClick={() => handleFileRemove('cover')}>Remove</button>
+                    <button type="button" className="remove-apply-file-button" onClick={() => handleFileRemove('cover')}>REMOVE</button>
                   )}
                 </div>
               </div>
             </div>
-
-            <label className="message-label">Message: </label>
-            <h1 className="message-note">Tell us why you want to work for TBS! </h1>
+                  </div>
+                  <div className="job-message">
+            <label className="message-label">Message *</label>
+            <h2 className="message-note">Tell us why you want to work for TBS! </h2>
 
             <textarea className="message-text" name="message" type="text" placeholder="Enter Message"
               value={data.message} onChange={(e) => formData({ ...data, message: e.target.value })} />
               {errors.message && <div className="error-message">{errors.message}</div>}
-            <h1 className="warning-message">If you have already submitted before, you will not be able to submit again. If you're a former
+            <h2 className="warning-message"><b className="submit-notice">NOTICE:</b> If you have already submitted before, you will not be able to submit again. If you're a former
               employee for TBS and want your job back, please call (706) 263-0175. If you're new and just submitted, your information has already
-                 been received!</h1>
+                 been received!</h2>
+                 </div>
             <button type="submit" className="btn btn--full submit-app">SUBMIT APPLICATION</button>
             
-          </div>
-{/* Display submission error message */}
-{submissionErrorMessage && (
+            </div>
+            {submissionErrorMessage && (
   <div className="submission-error-message">{submissionErrorMessage}</div>
 )}
-
-
 {/* Display general error message */}
 {errorMessage && (
   <div className="submission-error-message">{errorMessage}</div>
 )}
-
 {/* Display submission success message */}
 {submissionMessage && (
   <div className="submission-message">{submissionMessage}</div>
 )}
+            </div>
+          {/* Display submission error message */}
+
         </form>
 
       </main>
