@@ -72,7 +72,6 @@ export default function Home() {
     <li>Speed Control Measures</li>
     <li>Advanced Warning Signs</li>
 </div>
-<a href="/traffic-control-services" className="btn -- btn-traffic">Traffic Control Services</a>
 </div>
     </div>
     <div className="man-services">
@@ -97,7 +96,6 @@ export default function Home() {
     <li>Sign Post Installation & Repair</li>
     <li>Construction Zone Safety Products</li>
 </div>
-<button  className="btn -- btn-product">Product Services</button>
 </div>
 </div>
       
