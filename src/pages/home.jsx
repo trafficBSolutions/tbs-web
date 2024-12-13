@@ -5,6 +5,7 @@ import '../css/footer.css';
 import HomePhotoGallery from '../components/homephotogal'; 
 import Header from '../components/headerviews/HeaderDrop'
 import images from '../utils/tbsImages';
+import MapComponent from '../components/MapHome';
 export default function Home() {
     return (
       <div>
