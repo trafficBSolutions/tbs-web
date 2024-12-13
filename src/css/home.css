@@ -68,7 +68,12 @@ body {
   color: #555;
   overflow-x: hidden;
 }
-
+label {
+    font-size: 18px;
+    color: #5a270f;
+    margin-bottom: 5px;
+    display: block;
+}
 /* General reusable components */
 .container {
   max-width: 120rem;
